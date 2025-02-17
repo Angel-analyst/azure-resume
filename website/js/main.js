@@ -21,5 +21,29 @@
       backDelay: 2000
     });
   }
+  
 
-  /**
+
+  const texts = ["Cloud Computing", "Data Analyst"];
+let index = 0;
+
+setInterval(() => {
+    document.getElementById("animated-text").textContent = texts[index];
+    index = (index + 1) % texts.length;
+}, 1500);
+
+
+// Desplazamiento Suave
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+</script>
