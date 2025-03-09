@@ -13,17 +13,6 @@ This is my Cloud Resume Challenge built on Azure. It's a static website hosted o
 - `.github/workflows/`: Contains CI/CD workflow configurations.
 - `.devcontainer/`: Contains the container configuration for VS Code.
 
-## Setup
-
-1. Make sure Docker is running.
-2. Open the project in VS Code.
-3. Press `Ctrl/Cmd + Shift + P` to open the command palette.
-4. Type `Reopen in Container` and select:
-   - `.NET API` container for working with the Azure Functions backend.
-   - `JS Frontend` container for working with the frontend.
-   - `Tests` container for running tests.
-5. VS Code will reload and you'll be in the container.
-
 ## Frontend Resources
 
 The front-end is a static site with HTML, CSS, and JavaScript. It includes a visitor counter that fetches data via an API call to an Azure Function.
