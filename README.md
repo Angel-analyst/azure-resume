@@ -39,3 +39,26 @@ async function updateCounter() {
 
 updateCounter();
 ```
+
+## Backend Resources  
+The back-end is an **HTTP triggered Azure Function** with Cosmos DB input and output binding. The function retrieves a CosmosDB item, increments it, saves it, and returns its value to the caller.  
+
+- [Create a Cosmos DB account](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/quickstart-portal)  
+- [Create an HTTP triggered Azure Function in Visual Studio Code](https://learn.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code?tabs=node-v4%2Cpython-v2%2Cisolated-process%2Cquick-create&pivots=programming-language-csharp)  
+- [Azure Functions Cosmos DB bindings](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2?tabs=isolated-process%2Cextensionv4&pivots=programming-language-csharp)  
+- [Retrieve a Cosmos DB item with Functions binding](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2-input?tabs=python-v2%2Cisolated-process%2Cnodejs-v4%2Cextensionv4&pivots=programming-language-csharp)  
+- [Write to a Cosmos DB item with Functions binding](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2-output?tabs=python-v2%2Cisolated-process%2Cnodejs-v4%2Cextensionv4&pivots=programming-language-csharp)  
+- [Enable CORS with Azure Functions locally](https://learn.microsoft.com/en-us/azure/azure-functions/functions-develop-local?pivots=programming-language-csharp#local-settings-file) and once it's [deployed to Azure](https://learn.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings?tabs=azure-portal%2Cto-premium#cors).  
+
+## Testing Resources  
+[Testing is important](https://dev.to/flippedcoding/its-important-to-test-your-code-3lid). Though my tests are simple, they exist. I am using .NET but some of these resources will apply to any language.  
+
+- [Getting Started with xUnit.net](https://xunit.net/docs/getting-started/v2/netcore/cmdline)  
+- [Testing Azure Functions](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-net)  
+
+## CI/CD Resources  
+- [Deploy a blob storage static site with GitHub Actions](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions?tabs=openid)  
+- [Deploy an Azure Function to Azure with GitHub Actions](https://github.com/marketplace/actions/azure-functions-action)  
+- [Implement .NET testing in GitHub Actions](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-net)  
+
+
