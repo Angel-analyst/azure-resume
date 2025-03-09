@@ -4,6 +4,8 @@
 
 This is my Cloud Resume Challenge built on Azure. It's a static website hosted on Azure Storage, with a visitor counter built on Azure Functions. The website is built with HTML, CSS, and JavaScript. The visitor counter is built with .NET and Azure Functions.
 
+![Arquitectura](/Frontend/website/assets/architecture.png) 
+
 ## Structure
 
 - `frontend/`: Contains the website.
@@ -23,7 +25,7 @@ The front-end is a static site with HTML, CSS, and JavaScript. It includes a vis
 - This is how you can [deploy a static site to blob storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website-host).
 
 
-## Firts Steps
+## First Steps
 
 - Frontend folder contains the website
 - main.js contains visitor counter code
