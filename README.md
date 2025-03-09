@@ -1,4 +1,6 @@
-# azure-resume
+# Cloud Resume Challenge - Azure
+
+## Project Overview
 
 This is my Cloud Resume Challenge built on Azure. It's a static website hosted on Azure Storage, with a visitor counter built on Azure Functions. The website is built with HTML, CSS, and JavaScript. The visitor counter is built with .NET and Azure Functions.
 
@@ -38,5 +40,13 @@ The front-end is a static site with HTML, CSS, and JavaScript. It includes a vis
 - main.js contains visitor counter code
 
 ```js
-const 
+const counter = document.querySelector(".visits");
+
+async function updateCounter() {
+    let response = await fetch("https://h7fsqmvotxduazvf4ghmbka6y40igcjx.lambda-url.us-east-1.on.aws/");
+    let data = await response.json();
+    counter.innerHTML = `${data.counter}`; // Assuming data contains a "counter" key
+}
+
+updateCounter();
 ```
