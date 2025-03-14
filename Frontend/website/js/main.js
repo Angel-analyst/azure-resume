@@ -33,17 +33,27 @@ setInterval(() => {
 }, 1500);
 
 
-// Desplazamiento Suave
+// Scroll top button
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    });
-</script>
+document.addEventListener("DOMContentLoaded", function () {
+  let scrollTop = document.getElementById("scroll-top");
+
+  function toggleScrollTop() {
+      if (window.scrollY > 100) {
+          scrollTop.style.display = "flex"; // Aparece cuando bajas
+      } else {
+          scrollTop.style.display = "none"; // Desaparece cuando estás arriba
+      }
+  }
+
+  scrollTop.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+      });
+  });
+
+  window.addEventListener("scroll", toggleScrollTop);
+});
+
