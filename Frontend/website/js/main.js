@@ -21,8 +21,11 @@
       backDelay: 2000
     });
   }
-  
 
+  
+   /**
+   * Scroll top button
+   */
 
   const texts = ["Cloud Computing", "Data Analyst"];
 let index = 0;
@@ -33,35 +36,18 @@ setInterval(() => {
 }, 1500);
 
 
-// Scroll top button
+document.addEventListener("DOMContentLoaded", function () {
+  let scrollTopBtn = document.getElementById("scrollTopBtn");
 
-let scrollTop = document.querySelector('.scroll-top');
+  window.addEventListener("scroll", function () {
+      if (window.scrollY > 300) {
+          scrollTopBtn.style.display = "block";
+      } else {
+          scrollTopBtn.style.display = "none";
+      }
+  });
 
-function toggleScrollTop() {
-  if (scrollTop) {
-    window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-  }
-}
-scrollTop.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+  scrollTopBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
-
-window.addEventListener('load', toggleScrollTop);
-document.addEventListener('scroll', toggleScrollTop);
-
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
