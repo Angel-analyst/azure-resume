@@ -35,25 +35,33 @@ setInterval(() => {
 
 // Scroll top button
 
-document.addEventListener("DOMContentLoaded", function () {
-  let scrollTop = document.getElementById("scroll-top");
+let scrollTop = document.querySelector('.scroll-top');
 
-  function toggleScrollTop() {
-      if (window.scrollY > 100) {
-          scrollTop.style.display = "flex"; // Aparece cuando bajas
-      } else {
-          scrollTop.style.display = "none"; // Desaparece cuando estás arriba
-      }
+function toggleScrollTop() {
+  if (scrollTop) {
+    window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
   }
-
-  scrollTop.addEventListener("click", function (e) {
-      e.preventDefault();
-      window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-      });
+}
+scrollTop.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
   });
-
-  window.addEventListener("scroll", toggleScrollTop);
 });
 
+window.addEventListener('load', toggleScrollTop);
+document.addEventListener('scroll', toggleScrollTop);
+
+  /**
+   * Animation on scroll function and init
+   */
+  function aosInit() {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  }
+  window.addEventListener('load', aosInit);
