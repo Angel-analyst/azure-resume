@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', (event) =>{
 })
 
 const functionApi='';
+const localApiUrl = '';
 
 const getVisitCount = () => {
     let count = 30;
